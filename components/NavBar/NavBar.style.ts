@@ -43,9 +43,26 @@ export const SidebarRight = styled.div<{
 
 export const AStyle = styled.a`
   font-family: "Jost", sans-serif;
-  font-size: 24px;
-  line-height: 25px;
+  font-size: 2.4rem;
+  line-height: 2.5rem;
   letter-spacing: 2px;
   color: #fff;
   padding-left: 2.4rem;
+  vertical-align: top;
+  cursor: pointer;
+`;
+
+////////
+
+export const RouterWrapper = styled.div``;
+
+export const AStyleTabletOrDesk = styled.a`
+  font-family: "Jost", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  letter-spacing: 2px;
+  color: #333136;
+  vertical-align: top;
+  padding-left: 4.4rem;
+  cursor: pointer;
 `;

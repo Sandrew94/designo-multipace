@@ -10,6 +10,8 @@ body {
     Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
+    max-width: max-content;
+    margin: 0 auto;
 }
 
 a {

@@ -20,29 +20,25 @@ export default function Sidebar({}: Props) {
     setdisplayStyle(!displayStyle);
   };
   return (
-    <>
-      <SidebarStyle
-        onClick={handleDisplaySidebar}
-      >
-        {displayStyle ? (
-          <>
-            <BackgroundActive />
-            <Image
-              src={crossIcon}
-              width={24}
-              height={20}
-              alt="logo-image-close"
-            />
-          </>
-        ) : (
+    <SidebarStyle onClick={handleDisplaySidebar}>
+      {displayStyle ? (
+        <>
+          <BackgroundActive />
           <Image
-            src={iconHamb}
+            src={crossIcon}
             width={24}
             height={20}
-            alt="logo-image-open"
+            alt="logo-image-close"
           />
-        )}
-      </SidebarStyle>
+        </>
+      ) : (
+        <Image
+          src={iconHamb}
+          width={24}
+          height={20}
+          alt="logo-image-open"
+        />
+      )}
       <SidebarRight displayStyle={displayStyle}>
         <Link href="/web-design">
           <AStyle>OUR COMPANY</AStyle>
@@ -54,6 +50,6 @@ export default function Sidebar({}: Props) {
           <AStyle>CONTACT</AStyle>
         </Link>
       </SidebarRight>
-    </>
+    </SidebarStyle>
   );
 }

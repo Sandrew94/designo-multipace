@@ -42,6 +42,7 @@ export const SidebarRight = styled.div<{
 `;
 
 export const AStyle = styled.a`
+  text-decoration: none;
   font-family: "Jost", sans-serif;
   font-size: 2.4rem;
   line-height: 2.5rem;
@@ -65,4 +66,18 @@ export const AStyleTabletOrDesk = styled.a`
   vertical-align: top;
   padding-left: 4.4rem;
   cursor: pointer;
+  text-decoration: none;
+`;
+
+////////
+
+export const BackgroundActive = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: -1;
 `;

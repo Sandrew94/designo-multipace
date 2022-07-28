@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   AStyle,
+  BackgroundActive,
   SidebarRight,
   SidebarStyle,
 } from "../NavBar.style";
@@ -24,12 +25,15 @@ export default function Sidebar({}: Props) {
         onClick={handleDisplaySidebar}
       >
         {displayStyle ? (
-          <Image
-            src={crossIcon}
-            width={24}
-            height={20}
-            alt="logo-image-close"
-          />
+          <>
+            <BackgroundActive />
+            <Image
+              src={crossIcon}
+              width={24}
+              height={20}
+              alt="logo-image-close"
+            />
+          </>
         ) : (
           <Image
             src={iconHamb}

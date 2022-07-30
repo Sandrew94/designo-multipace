@@ -25,4 +25,12 @@ a {
   /* //1rem = 10px */
 }
 
+h1,h2{
+  margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0em;
+    margin-inline-end: 0em;
+}
+
+
 `;

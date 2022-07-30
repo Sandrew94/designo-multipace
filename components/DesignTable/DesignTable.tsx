@@ -1,13 +1,17 @@
 import React from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { WrapperMain } from "./DesignTable.style";
-import SingleTable from "./SingleTable/SingleTable";
+import DesktopDesignTable from "./DesktopDesignTable/DesktopDesignTable";
+import SingleTable from "./SingleTable/SingleTableMobile";
 
 type Props = {};
 
 export default function DesignTable({}: Props) {
   const isTablet = useMediaQuery(
     "(min-width: 768px)"
+  );
+  const isLaptop = useMediaQuery(
+    "(min-width: 1024px)"
   );
   const textDesign = [
     {
@@ -31,15 +35,19 @@ export default function DesignTable({}: Props) {
   ];
   return (
     <WrapperMain>
-      {textDesign.map((item, idx) => {
-        return (
-          <SingleTable
-            key={idx}
-            image={item.url}
-            title={item.title}
-          />
-        );
-      })}
+      {isLaptop ? (
+        <DesktopDesignTable />
+      ) : (
+        textDesign.map((item, idx) => {
+          return (
+            <SingleTable
+              key={idx}
+              image={item.url}
+              title={item.title}
+            />
+          );
+        })
+      )}
     </WrapperMain>
   );
 }

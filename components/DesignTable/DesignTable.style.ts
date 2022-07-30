@@ -13,11 +13,24 @@ export const WrapperMain = styled.div`
     margin-top: 15%;
     height: 90vh;
   }
+  @media ${device.laptop} {
+    justify-content: unset;
+    margin-top: 0%;
+  }
+
+  @media ${device.laptopL} {
+    justify-content: unset;
+    height: 80vh;
+    margin-top: 5%;
+  }
 `;
 
 ////////////////////////////////////////////////////////////////
 
-export const WrapperTable = styled.div`
+export const WrapperTable = styled.div<{
+  width?: string;
+  height?: string;
+}>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,6 +44,12 @@ export const WrapperTable = styled.div`
   @media ${device.tablet} {
     width: 95vw;
     height: 20rem;
+  }
+
+  @media ${device.laptop} {
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
+    margin: 1rem 0;
   }
 `;
 
@@ -60,4 +79,34 @@ export const TextDescriptionPJ = styled.h2`
 
 export const SvgArrowPos = styled.span`
   margin-left: 2.5rem;
+`;
+
+////////
+
+//DESKTOP VIEW
+
+export const WrapperDesktop = styled.section`
+  width: 95%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const WrapperBigTable = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  padding: 1rem 0;
+`;
+
+export const WrapperGrAndAppDesign = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80%;
 `;

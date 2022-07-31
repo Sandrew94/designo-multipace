@@ -1,11 +1,13 @@
 import React from "react";
 import {
+  ContainerHeroText,
   PositionHeroImage,
   TitleDescription,
   TitleHero,
   WrapperHero,
 } from "../HeroSection.style";
 import Image from "next/image";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 
 type Props = {
   url: string;
@@ -18,6 +20,10 @@ export default function SingleHero({
   title,
   description,
 }: Props) {
+  const isTablet = useMediaQuery(
+    "(min-width:768px)"
+  );
+
   return (
     <WrapperHero>
       <PositionHeroImage>
@@ -27,10 +33,22 @@ export default function SingleHero({
           height={202}
         />
       </PositionHeroImage>
-      <TitleHero>{title}</TitleHero>
-      <TitleDescription>
-        {description}
-      </TitleDescription>
+      {isTablet ? (
+        <ContainerHeroText>
+          <TitleHero>{title}</TitleHero>
+          <TitleDescription>
+            {description}
+          </TitleDescription>
+        </ContainerHeroText>
+      ) : (
+        //Mobile
+        <>
+          <TitleHero>{title}</TitleHero>
+          <TitleDescription>
+            {description}
+          </TitleDescription>
+        </>
+      )}
     </WrapperHero>
   );
 }

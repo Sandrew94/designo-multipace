@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "../../styles/device";
 
 export const WrapperMain = styled.section`
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   margin-top: 25%;
   position: relative;

@@ -35,7 +35,8 @@ export const WrapperTable = styled.div<{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 32.7rem;
+  //width: 32.7rem;
+  width: 100vw;
   height: 25rem;
   position: relative;
   border-radius: 15px;
@@ -60,8 +61,6 @@ export const TextDesignTitle = styled.h1`
   letter-spacing: 1.4px;
   color: #fff;
   z-index: 2;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
   @media ${device.tablet} {
     margin-bottom: 1rem;
   }

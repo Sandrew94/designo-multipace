@@ -26,10 +26,10 @@ describe("Test HeaderHome style and media queryes", () => {
       expect(container).toMatchInlineSnapshot(`
 <div>
   <div
-    class="sc-bczRLJ citeBF"
+    class="sc-gsnTZi czlLQX"
   >
     <div
-      class="sc-gsnTZi czwQRw"
+      class="sc-dkzDqf DFSlT"
     >
       <span
         style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
@@ -54,26 +54,26 @@ describe("Test HeaderHome style and media queryes", () => {
       </span>
     </div>
     <div
-      class="sc-dkzDqf jPAhal"
+      class="sc-hKMtZM cvxFoi"
     >
       <span
-        class="sc-hKMtZM ihjoIU"
+        class="sc-eCYdqJ eytYul"
       >
         Award-winning custom designs and digital branding solutions
       </span>
       <span
-        class="sc-eCYdqJ cHEhGr"
+        class="sc-jSMfEi bIzgup"
       >
         With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.
       </span>
       <button
-        class="sc-jSMfEi goiftG"
+        class="sc-bczRLJ sc-gKXOVf ihYGAn bwrVnK"
       >
         LEARN MORE
       </button>
     </div>
     <div
-      class="sc-gKXOVf efRbcB"
+      class="sc-iBkjds kWrhIT"
     >
       <span
         style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 24px; height: 24px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
@@ -97,10 +97,10 @@ describe("Test HeaderHome style and media queryes", () => {
       expect(container).toMatchInlineSnapshot(`
 <div>
   <div
-    class="sc-bczRLJ citeBF"
+    class="sc-gsnTZi czlLQX"
   >
     <div
-      class="sc-gsnTZi czwQRw"
+      class="sc-dkzDqf DFSlT"
     >
       <span
         style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
@@ -125,26 +125,26 @@ describe("Test HeaderHome style and media queryes", () => {
       </span>
     </div>
     <div
-      class="sc-dkzDqf jPAhal"
+      class="sc-hKMtZM cvxFoi"
     >
       <span
-        class="sc-hKMtZM ihjoIU"
+        class="sc-eCYdqJ eytYul"
       >
         Award-winning custom designs and digital branding solutions
       </span>
       <span
-        class="sc-eCYdqJ cHEhGr"
+        class="sc-jSMfEi bIzgup"
       >
         With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.
       </span>
       <button
-        class="sc-jSMfEi goiftG"
+        class="sc-bczRLJ sc-gKXOVf ihYGAn bwrVnK"
       >
         LEARN MORE
       </button>
     </div>
     <div
-      class="sc-gKXOVf efRbcB"
+      class="sc-iBkjds kWrhIT"
     >
       <span
         style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 24px; height: 24px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"

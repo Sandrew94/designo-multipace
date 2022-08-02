@@ -24,11 +24,7 @@ export default function SingleTable({
 }: Props) {
   return (
     <WrapperTable width={width} height={height}>
-      <Image
-        src={image}
-        layout="fill"
-        objectFit="cover"
-      />
+      <Image src={image} layout="fill" objectFit="cover" alt={"photo"} />
       <TextDesignTitle>{title}</TextDesignTitle>
       <TextDescriptionPJ>
         VIEW PROJECTS
@@ -37,6 +33,7 @@ export default function SingleTable({
             src={svgRightArrow}
             width="7px"
             height="10px"
+            alt={"photo12"}
           />
         </SvgArrowPos>
       </TextDescriptionPJ>

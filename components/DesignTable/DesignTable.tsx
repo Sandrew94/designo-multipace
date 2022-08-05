@@ -35,7 +35,6 @@ export default function DesignTable({}: Props) {
         <DesktopDesignTable />
       ) : (
         textDesign.map((item, idx) => {
-          console.log(item);
           return <SingleTable key={idx} image={item.url} title={item.title} />;
         })
       )}

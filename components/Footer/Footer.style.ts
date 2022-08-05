@@ -87,6 +87,10 @@ export const PtTitle = styled.h1`
     width: 70%;
     text-align: left;
   }
+
+  @media ${device.laptopL} {
+    width: 50%;
+  }
 `;
 
 export const PtDescription = styled.h2`
@@ -110,6 +114,10 @@ export const PtDescription = styled.h2`
   @media ${device.laptop} {
     width: 100%;
     text-align: left;
+  }
+
+  @media ${device.laptopL} {
+    width: 80%;
   }
 `;
 

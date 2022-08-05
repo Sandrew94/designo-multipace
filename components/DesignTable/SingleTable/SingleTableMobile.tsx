@@ -8,6 +8,7 @@ import {
 import Image from "next/image";
 
 import svgRightArrow from "../../../public/assets/shared/desktop/icon-right-arrow.svg";
+import Link from "next/link";
 
 type Props = {
   image: string;
@@ -22,10 +23,13 @@ export default function SingleTable({
   width = "54.1rem", //desktop default
   height = "30.8rem", //desktop default
 }: Props) {
+  const linkToPage = title.toLowerCase().split(" ").join("-");
   return (
     <WrapperTable width={width} height={height}>
       <Image src={image} layout="fill" objectFit="cover" alt={"photo"} />
-      <TextDesignTitle>{title}</TextDesignTitle>
+      <Link href={linkToPage}>
+        <TextDesignTitle>{title}</TextDesignTitle>
+      </Link>
       <TextDescriptionPJ>
         VIEW PROJECTS
         <SvgArrowPos>

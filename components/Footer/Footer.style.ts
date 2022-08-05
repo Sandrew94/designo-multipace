@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ButtonStyle } from "../../styles/Button.style";
 import { device } from "../../styles/device";
 
 export const WrapperFooter = styled.footer`
@@ -123,12 +122,6 @@ export const PtDescription = styled.h2`
 
 export const TextContainer = styled.div`
   width: 50%;
-`;
-
-export const PtButton = styled(ButtonStyle)`
-  position: relative;
-  z-index: 3;
-  //margin-bottom: 4rem;
 `;
 
 export const PtSvgPosition = styled.div`

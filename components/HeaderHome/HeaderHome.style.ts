@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { device } from "../../styles/device";
-import { ButtonStyle } from "../../styles/Button.style";
 
 export const WrapperHeaderHome = styled.div`
   width: 100%;
@@ -112,14 +111,6 @@ export const TextDescriptionHH = styled.span`
     padding-left: 10rem;
     width: 75%;
     margin-bottom: 6rem;
-  }
-`;
-
-export const LearnMoreButtonHH = styled(
-  ButtonStyle
-)`
-  @media ${device.laptopL} {
-    margin-left: 10rem;
   }
 `;
 

@@ -17,6 +17,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight:inherit;
+  line-height:inherit;
+  font-family:inherit;
 }
 
 * {

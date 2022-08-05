@@ -1,12 +1,12 @@
 import * as React from "react";
 import {
-  PtButton,
   PtDescription,
   PtSvgPosition,
   PtTitle,
   TextContainer,
   WrapperPT,
 } from "../../Footer.style";
+import ButtonLink from "../../../Button/ButtonLink";
 
 type Props = {};
 export const LaptopViewPt = (props: Props) => {
@@ -69,7 +69,14 @@ export const LaptopViewPt = (props: Props) => {
         </PtDescription>
       </TextContainer>
 
-      <PtButton>GET IN TOUCH</PtButton>
+      <ButtonLink
+        href={"/contact"}
+        text={"GET IN TOUCH"}
+        stylesText={{
+          position: "relative",
+          zIndex: 3,
+        }}
+      />
     </WrapperPT>
   );
 };

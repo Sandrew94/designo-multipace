@@ -1,11 +1,11 @@
 import * as React from "react";
 import {
-  PtButton,
   PtDescription,
   PtSvgPosition,
   PtTitle,
   WrapperPT,
 } from "../../Footer.style";
+import ButtonLink from "../../../Button/ButtonLink";
 
 type Props = {};
 export const MobileAndTabletViewPT = (props: Props) => {
@@ -65,7 +65,14 @@ export const MobileAndTabletViewPT = (props: Props) => {
         Ready to take it to the next level? Contact us today and find out how
         our expertise can help your business grow.
       </PtDescription>
-      <PtButton>GET IN TOUCH</PtButton>
+      <ButtonLink
+        href={"/contact"}
+        text={"GET IN TOUCH"}
+        stylesText={{
+          position: "relative",
+          zIndex: 3,
+        }}
+      />
     </WrapperPT>
   );
 };

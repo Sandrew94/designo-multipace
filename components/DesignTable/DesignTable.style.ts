@@ -61,6 +61,7 @@ export const TextDesignTitle = styled.h1`
   letter-spacing: 1.4px;
   color: #fff;
   z-index: 2;
+  cursor: pointer;
   @media ${device.tablet} {
     margin-bottom: 1rem;
   }

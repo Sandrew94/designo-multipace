@@ -7,13 +7,14 @@ import {
   TextDescriptionHH,
   TextTitleHH,
 } from "../HeaderHome.style";
+
 import BackgroundPartner from "/public/assets/home/desktop/bg-pattern-hero-home.svg";
 import FramePhone from "/public/assets/home/desktop/image-hero-phone.png";
 import ButtonLink from "../../Button/ButtonLink";
-
+import { device } from "../../../styles/device";
 type Props = {};
 
-export default function LaptopView({}: Props) {
+export default function TabletOrMobileView({}: Props) {
   return (
     <>
       <SVGPosition>
@@ -34,6 +35,7 @@ export default function LaptopView({}: Props) {
           fully responsive websites, app design, and engaging brand experiences.
           Find out more about our services.
         </TextDescriptionHH>
+
         <ButtonLink
           href={"/about"}
           text={"LEARN MORE"}
@@ -41,10 +43,11 @@ export default function LaptopView({}: Props) {
             zIndex: 5,
           }}
         />
+
+        <HeroPhone>
+          <Image src={FramePhone} layout="fixed" alt={"Background image"} />
+        </HeroPhone>
       </ContainerHH>
-      <HeroPhone>
-        <Image src={FramePhone} layout="fixed" alt={"Background image"} />
-      </HeroPhone>
     </>
   );
 }

@@ -7,12 +7,8 @@ import SingleTable from "./SingleTable/SingleTableMobile";
 type Props = {};
 
 export default function DesignTable({}: Props) {
-  const isTablet = useMediaQuery(
-    "(min-width: 768px)"
-  );
-  const isLaptop = useMediaQuery(
-    "(min-width: 1024px)"
-  );
+  const isTablet = useMediaQuery("(min-width: 768px)");
+  const isLaptop = useMediaQuery("(min-width: 1024px)");
   const textDesign = [
     {
       title: "WEB DESIGN",
@@ -39,13 +35,8 @@ export default function DesignTable({}: Props) {
         <DesktopDesignTable />
       ) : (
         textDesign.map((item, idx) => {
-          return (
-            <SingleTable
-              key={idx}
-              image={item.url}
-              title={item.title}
-            />
-          );
+          console.log(item);
+          return <SingleTable key={idx} image={item.url} title={item.title} />;
         })
       )}
     </WrapperMain>

@@ -13,9 +13,7 @@ export default function DesktopDesignTable({}: Props) {
     <WrapperDesktop>
       <WrapperBigTable>
         <SingleTable
-          image={
-            "/assets/home/desktop/image-web-design-large.jpg"
-          }
+          image={"/assets/home/desktop/image-web-design-large.jpg"}
           title={"WEB DESIGN"}
           width="100%"
           height="100%"
@@ -23,18 +21,14 @@ export default function DesktopDesignTable({}: Props) {
       </WrapperBigTable>
       <WrapperGrAndAppDesign>
         <SingleTable
-          image={
-            "/assets/home/desktop/image-app-design.jpg"
-          }
-          title={"WEB DESIGN"}
+          image={"/assets/home/desktop/image-app-design.jpg"}
+          title={"APP DESIGN"}
           width="95%"
           height="100%"
         />
         <SingleTable
-          image={
-            "/assets/home/desktop/image-graphic-design.jpg"
-          }
-          title={"WEB DESIGN"}
+          image={"/assets/home/desktop/image-graphic-design.jpg"}
+          title={"GRAPHIC DESIGN"}
           width="95%"
           height="100%"
         />

@@ -12,6 +12,7 @@ import {
   WrapperSocial,
 } from "../../Footer.style";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {};
 export const MobileViewFB = (props: Props) => {
@@ -28,9 +29,15 @@ export const MobileViewFB = (props: Props) => {
       </FooterLogo>
       <InfoLinkContainer>
         <Divider />
-        <InfoLinkStyle>OUR COMPANY</InfoLinkStyle>
-        <InfoLinkStyle>LOCATIONS</InfoLinkStyle>
-        <InfoLinkStyle>CONTACT</InfoLinkStyle>
+        <Link href={"/about"}>
+          <InfoLinkStyle>OUR COMPANY</InfoLinkStyle>
+        </Link>
+        <Link href={"/locations"}>
+          <InfoLinkStyle>LOCATIONS</InfoLinkStyle>
+        </Link>
+        <Link href={"/contact"}>
+          <InfoLinkStyle>CONTACT</InfoLinkStyle>
+        </Link>
       </InfoLinkContainer>
       <DescribeParagraph>
         <DPTitle>Designo Central Office</DPTitle>

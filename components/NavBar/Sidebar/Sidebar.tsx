@@ -13,11 +13,10 @@ import {
 type Props = {};
 
 export default function Sidebar({}: Props) {
-  const [displayStyle, setdisplayStyle] =
-    useState(false);
+  const [displayStyle, setDisplayStyle] = useState(false);
 
   const handleDisplaySidebar = () => {
-    setdisplayStyle(!displayStyle);
+    setDisplayStyle(!displayStyle);
   };
   return (
     <SidebarStyle onClick={handleDisplaySidebar}>
@@ -32,15 +31,10 @@ export default function Sidebar({}: Props) {
           />
         </>
       ) : (
-        <Image
-          src={iconHamb}
-          width={24}
-          height={20}
-          alt="logo-image-open"
-        />
+        <Image src={iconHamb} width={24} height={20} alt="logo-image-open" />
       )}
       <SidebarRight displayStyle={displayStyle}>
-        <Link href="/web-design">
+        <Link href="/">
           <AStyle>OUR COMPANY</AStyle>
         </Link>
         <Link href="/locations">

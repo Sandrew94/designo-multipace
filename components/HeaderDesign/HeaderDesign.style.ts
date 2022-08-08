@@ -16,7 +16,7 @@ export const WrapperHeaderDesign = styled.section`
     border-radius: 20px;
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 35%;
+    margin-bottom: 5%;
   }
 `;
 

@@ -11,7 +11,7 @@ export const WrapperHeaderHome = styled.div`
 
   @media ${device.tablet} {
     border-radius: 15px;
-    width: 95%;
+    width: 90%;
     height: 75%;
     margin: 0 auto;
   }
@@ -135,7 +135,7 @@ export const HeroPhone = styled.div`
   @media ${device.laptopL} {
     width: 50%;
     position: absolute;
-    right: -11%;
+    right: -8%;
     top: 12%;
   }
 `;

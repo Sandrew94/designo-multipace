@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../styles/device";
 
 export const Wrapper = styled.div`
   width: auto;
@@ -8,9 +9,18 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   padding: 2rem;
   position: relative;
+  @media ${device.laptop} {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
 `;
 
-export const LogoWrapper = styled.div``;
+export const LogoWrapper = styled.div`
+  // @media ${device.laptop} {
+  //   width: 50%;
+  // }
+`;
 
 export const LogoText = styled.span`
   font-family: "Spartan", sans-serif;
@@ -37,8 +47,7 @@ export const SidebarRight = styled.div<{
   height: 23.5rem;
   background-color: #1d1c1e;
   margin-top: 9.6rem;
-  display: ${(props) =>
-    props.displayStyle ? "flex" : "none"};
+  display: ${(props) => (props.displayStyle ? "flex" : "none")};
   flex-direction: column;
   justify-content: space-evenly;
 `;
@@ -57,7 +66,11 @@ export const AStyle = styled.a`
 
 ////////
 
-export const RouterWrapper = styled.div``;
+export const RouterWrapper = styled.div`
+  // @media ${device.laptop} {
+  //   width: 50%;
+  // }
+`;
 
 export const AStyleTabletOrDesk = styled.a`
   font-family: "Jost", sans-serif;

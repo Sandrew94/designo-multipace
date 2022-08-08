@@ -13,11 +13,11 @@ export const WrapperFooter = styled.footer`
 
   @media ${device.tablet} {
     height: 60rem;
-    margin-top: 10rem;
+    margin-top: 25%;
   }
 
   @media ${device.laptop} {
-    margin-top: 0rem;
+    margin-top: 15%;
     width: 100%;
   }
 `;
@@ -37,13 +37,14 @@ export const WrapperPT = styled.div`
   top: -20%;
 
   @media ${device.laptop} {
-    width: 90rem;
+    //width: 90rem;
+    width: 90%;
     flex-direction: row;
     justify-content: space-around;
   }
 
   @media ${device.laptopL} {
-    width: 111rem;
+    //width: 111rem;
   }
 `;
 
@@ -145,7 +146,7 @@ export const FooterLogo = styled.div`
   }
 
   @media ${device.laptop} {
-    width: 50%;
+    width: 60%;
     margin-left: 0%;
   }
 `;
@@ -174,9 +175,9 @@ export const Divider = styled.div`
     margin-top: 6rem;
   }
 
-  @media ${device.laptop} {
-    width: 80%;
-  }
+  // @media ${device.laptop} {
+  //   width: 80%;
+  // }
 `;
 
 export const InfoLinkContainer = styled.div`
@@ -192,7 +193,7 @@ export const InfoLinkContainer = styled.div`
   }
 
   @media ${device.laptop} {
-    width: 40%;
+    width: 30%;
   }
 `;
 
@@ -303,6 +304,7 @@ export const WrapperFooterLand = styled.div`
   justify-content: center;
 
   @media ${device.laptop} {
-    width: 90%;
+    //width: 90%;
+    width: 100%;
   }
 `;

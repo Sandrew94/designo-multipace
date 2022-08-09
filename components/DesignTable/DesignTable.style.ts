@@ -86,7 +86,7 @@ export const SvgArrowPos = styled.span`
 //DESKTOP VIEW
 
 export const WrapperDesktop = styled.section`
-  width: 93%;
+  width: 90%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -105,7 +105,7 @@ export const WrapperBigTable = styled.div`
 export const WrapperGrAndAppDesign = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   width: 100%;
   height: 80%;

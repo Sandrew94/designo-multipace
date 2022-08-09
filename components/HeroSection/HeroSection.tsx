@@ -1,7 +1,7 @@
 import React from "react";
 import { WrapperMain } from "./HeroSection.style";
 import SingleHero from "./SingleHero/SingleHero";
-const { v4: uuidv4 } = require("uuid");
+import { v4 } from "uuid";
 type Props = {};
 
 export default function HeroSection({}: Props) {
@@ -30,7 +30,7 @@ export default function HeroSection({}: Props) {
       {heroSectionData.map((hero) => {
         return (
           <SingleHero
-            key={uuidv4()}
+            key={v4()}
             url={hero.url}
             title={hero.title}
             description={hero.description}

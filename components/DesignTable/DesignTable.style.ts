@@ -36,14 +36,14 @@ export const WrapperTable = styled.div<{
   align-items: center;
   justify-content: center;
   //width: 32.7rem;
-  width: 100vw;
+  width: 95vw;
   height: 25rem;
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  margin-top: 3rem;
+  margin: 3rem auto;
   @media ${device.tablet} {
-    width: 95vw;
+    width: 90vw;
     height: 20rem;
   }
 
@@ -109,4 +109,31 @@ export const WrapperGrAndAppDesign = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 80%;
+`;
+
+//ONLY DESKTOP
+
+export const WrapperDesktopSTM = styled.section`
+  display: flex;
+  margin: 0 auto;
+  width: 93%;
+  justify-content: space-between;
+
+  & :nth-child(1) {
+    margin: 0 1rem;
+  }
+  & :nth-child(2) {
+    margin: 0 1rem;
+  }
+
+  @media ${device.laptopL} {
+    width: 90%;
+
+    & :nth-child(1) {
+      margin: 0;
+    }
+    & :nth-child(2) {
+      margin: 0;
+    }
+  }
 `;

@@ -2,13 +2,18 @@ import React from "react";
 import HeaderDesign from "../../components/HeaderDesign/HeaderDesign";
 import { filterCard } from "../../utils/filterCard";
 import MultipleCardDesign from "../../components/CardDesign/MultipleCardDesign";
-import { dataDesignTest } from "../../DummyData/DummyData";
+import { dataDesignMock } from "../../DummyData/DummyData";
+import useMediaQuery from "../../hooks/useMediaQuery";
+import { useRouter } from "next/router";
+import DDTableMultiplePages from "../../components/DesignTable/DesktopDesignTable/DDTableMultiplePages";
 
 type Props = {};
 
 export default function WebDesign({}: Props) {
-  const filterCardData = filterCard("web-design", dataDesignTest);
-
+  const route = useRouter();
+  const filterCardData = filterCard("web-design", dataDesignMock);
+  const isTablet = useMediaQuery("(min-width: 768px)");
+  const isLaptop = useMediaQuery("(min-width: 1024px)");
   return (
     <>
       <HeaderDesign
@@ -18,6 +23,12 @@ export default function WebDesign({}: Props) {
         }
       />
       <MultipleCardDesign array={filterCardData["web-design"]} />
+
+      <DDTableMultiplePages
+        isLaptop={isLaptop}
+        isTablet={isTablet}
+        route={route}
+      />
     </>
   );
 }

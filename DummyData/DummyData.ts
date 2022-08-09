@@ -1,6 +1,6 @@
 import { FilterCardType } from "../types/CardType";
 
-export const dataDesignTest: FilterCardType = [
+export const dataDesignMock: FilterCardType = [
   {
     "web-design": [
       {

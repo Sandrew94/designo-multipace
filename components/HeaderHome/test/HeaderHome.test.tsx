@@ -19,7 +19,7 @@ describe("Test HeaderHome style and media queryes", () => {
       expect(container).toMatchInlineSnapshot(`
         <div>
           <div
-            class="sc-bczRLJ citeBF"
+            class="sc-bczRLJ knReKo"
           >
             <div
               class="sc-gsnTZi czwQRw"
@@ -71,7 +71,7 @@ describe("Test HeaderHome style and media queryes", () => {
               </button>
             </div>
             <div
-              class="sc-jSMfEi hcuzpk"
+              class="sc-jSMfEi kKWhFc"
             >
               <span
                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 24px; height: 24px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
@@ -96,7 +96,7 @@ describe("Test HeaderHome style and media queryes", () => {
       expect(container).toMatchInlineSnapshot(`
         <div>
           <div
-            class="sc-bczRLJ citeBF"
+            class="sc-bczRLJ knReKo"
           >
             <div
               class="sc-gsnTZi czwQRw"
@@ -148,7 +148,7 @@ describe("Test HeaderHome style and media queryes", () => {
               </button>
             </div>
             <div
-              class="sc-jSMfEi hcuzpk"
+              class="sc-jSMfEi kKWhFc"
             >
               <span
                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 24px; height: 24px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"

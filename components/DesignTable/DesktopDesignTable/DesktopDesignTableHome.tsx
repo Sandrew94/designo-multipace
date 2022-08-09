@@ -8,7 +8,7 @@ import SingleTable from "../SingleTable/SingleTableMobile";
 
 type Props = {};
 
-export default function DesktopDesignTable({}: Props) {
+export default function DesktopDesignTableHome({}: Props) {
   return (
     <WrapperDesktop>
       <WrapperBigTable>

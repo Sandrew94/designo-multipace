@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../styles/device";
 
 interface ColorBaseIdx {
   idx: number;
@@ -11,11 +12,24 @@ export const WrapperHeader1 = styled.section`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  @media ${device.tablet} {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-top: 6rem;
+  }
 `;
 
 export const ContainerImage = styled.div`
   position: relative;
   width: 100%;
+  overflow: hidden;
+  @media ${device.tablet} {
+    & span {
+      height: 32rem !important;
+    }
+  }
 `;
 
 export const ContainerTitleAB = styled.div<ColorBaseIdx>`
@@ -37,6 +51,11 @@ export const TitleAB = styled.span<ColorBaseIdx>`
   color: ${(props) => (props.idx === 0 ? "rgba(255, 255, 255, 1)" : "#E7816B")};
   padding-top: 10rem;
   z-index: 4;
+
+  @media ${device.tablet} {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
 `;
 
 export const DescriptionAB = styled.span<ColorBaseIdx>`
@@ -49,4 +68,10 @@ export const DescriptionAB = styled.span<ColorBaseIdx>`
   padding: 4rem 0 8rem 0;
   width: 85%;
   z-index: 4;
+  @media ${device.tablet} {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    text-align: center;
+    width: 75%;
+  }
 `;

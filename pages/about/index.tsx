@@ -1,5 +1,5 @@
-type Props = {};
+import AboutComp from "../../components/AboutComp/AboutComp";
 
-export default function About(props: Props) {
-  return <div>About</div>;
+export default function About() {
+  return <AboutComp />;
 }

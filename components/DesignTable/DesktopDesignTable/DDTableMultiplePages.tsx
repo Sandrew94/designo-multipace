@@ -1,4 +1,4 @@
-import { filterDesignTableData } from "../../../utils/DesignTableData";
+import { filterDesignTableData } from "../../../utils/DummyDataManipulations";
 import SingleTableMobile from "../SingleTable/SingleTableMobile";
 import { v4 } from "uuid";
 import React from "react";

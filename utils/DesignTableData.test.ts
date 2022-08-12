@@ -1,5 +1,5 @@
 import { expect } from "expect";
-import { filterDesignTableData } from "./DesignTableData";
+import { filterDesignTableData } from "./DummyDataManipulations";
 
 describe("Given 2 view (laptop or tablet) with the route of the page, it must filter the correct object", () => {
   const isLaptop = false;

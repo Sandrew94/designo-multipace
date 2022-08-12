@@ -5,7 +5,7 @@ interface ColorBaseIdx {
   idx: number;
 }
 
-export const WrapperHeader1 = styled.section`
+export const WrapperHeaderAB = styled.section<ColorBaseIdx>`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -19,15 +19,29 @@ export const WrapperHeader1 = styled.section`
     border-radius: 15px;
     margin-top: 6rem;
   }
+
+  @media ${device.laptop} {
+    flex-direction: ${(props) => (props.idx === 0 ? "row-reverse" : "row")};
+  }
 `;
 
-export const ContainerImage = styled.div`
+export const ContainerImage = styled.div<ColorBaseIdx>`
   position: relative;
   width: 100%;
   overflow: hidden;
   @media ${device.tablet} {
     & span {
       height: 32rem !important;
+    }
+  }
+
+  @media ${device.laptop} {
+    border-top-right-radius: ${(props) => (props.idx === 0 ? "15px" : "")};
+    border-bottom-right-radius: ${(props) => (props.idx === 0 ? "15px" : "")};
+    width: 40%;
+    & span {
+      height: ${(props) =>
+        props.idx === 0 ? "48rem !important" : "64rem !important"};
     }
   }
 `;
@@ -40,6 +54,12 @@ export const ContainerTitleAB = styled.div<ColorBaseIdx>`
   margin-top: -1px;
   position: relative;
   overflow: hidden;
+  @media ${device.laptop} {
+    width: 60%;
+    height: ${(props) =>
+      props.idx === 0 ? "48rem !important" : "64rem !important"};
+    justify-content: center;
+  }
 `;
 
 export const TitleAB = styled.span<ColorBaseIdx>`
@@ -55,6 +75,11 @@ export const TitleAB = styled.span<ColorBaseIdx>`
   @media ${device.tablet} {
     font-size: 4.8rem;
     line-height: 4.8rem;
+  }
+
+  @media ${device.laptop} {
+    width: 75%;
+    text-align: left;
   }
 `;
 
@@ -73,5 +98,9 @@ export const DescriptionAB = styled.span<ColorBaseIdx>`
     line-height: 2.6rem;
     text-align: center;
     width: 75%;
+  }
+
+  @media ${device.laptop} {
+    text-align: left;
   }
 `;

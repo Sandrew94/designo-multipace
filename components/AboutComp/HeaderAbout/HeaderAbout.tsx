@@ -3,16 +3,16 @@ import {
   ContainerTitleAB,
   DescriptionAB,
   TitleAB,
-  WrapperHeader1,
+  WrapperHeaderAB,
 } from "./HeaderAbout.styles";
 import Image from "next/image";
 import React from "react";
 
 type Props = {
   title: string;
-  description: string;
-  imgSrc: string;
-  altText: string;
+  description?: string;
+  url: string;
+  altText?: string;
   idx: number;
   children: React.ReactNode;
 };
@@ -20,16 +20,16 @@ type Props = {
 export default function HeaderAbout({
   title,
   description,
-  imgSrc,
+  url,
   altText,
   children,
   idx,
 }: Props) {
   return (
-    <WrapperHeader1>
-      <ContainerImage>
+    <WrapperHeaderAB idx={idx}>
+      <ContainerImage idx={idx}>
         <Image
-          src={imgSrc}
+          src={url}
           alt={altText}
           width={375}
           height={320}
@@ -44,18 +44,18 @@ export default function HeaderAbout({
             description
           ) : (
             <>
-              {description
+              {description!
                 .split("")
-                .splice(0, description.indexOf("Our" + " team"))
+                .splice(0, description!.indexOf("Our" + " team"))
                 .join("")}
               <br />
               <br />
-              {description.slice(description.indexOf("Our team"))}
+              {description!.slice(description!.indexOf("Our team"))}
             </>
           )}
         </DescriptionAB>
         {children}
       </ContainerTitleAB>
-    </WrapperHeader1>
+    </WrapperHeaderAB>
   );
 }

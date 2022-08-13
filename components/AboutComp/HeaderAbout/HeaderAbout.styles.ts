@@ -21,7 +21,8 @@ export const WrapperHeaderAB = styled.section<ColorBaseIdx>`
   }
 
   @media ${device.laptop} {
-    flex-direction: ${(props) => (props.idx === 0 ? "row-reverse" : "row")};
+    flex-direction: ${(props) =>
+      props.idx === 0 || props.idx === 2 ? "row-reverse" : "row"};
   }
 `;
 
@@ -81,6 +82,10 @@ export const TitleAB = styled.span<ColorBaseIdx>`
     width: 75%;
     text-align: left;
   }
+
+  @media ${device.laptop} {
+    width: 65%;
+  }
 `;
 
 export const DescriptionAB = styled.span<ColorBaseIdx>`
@@ -102,5 +107,9 @@ export const DescriptionAB = styled.span<ColorBaseIdx>`
 
   @media ${device.laptop} {
     text-align: left;
+  }
+
+  @media ${device.laptopL} {
+    width: 65%;
   }
 `;

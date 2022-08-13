@@ -65,6 +65,17 @@ export function filterDesignTableData(
         : "/assets/about/mobile/image-world-class-talent.jpg",
       altText: "Header-2 Image",
     },
+    {
+      title: "The real deal",
+      description:
+        "As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own. Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective to every opportunity. We make design and technology more accessible and give you tools to measure success.  We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, we inspire audiences to take action and drive real results.",
+      url: isLaptop
+        ? "/assets/about/desktop/image-real-deal.jpg"
+        : isTablet
+        ? "/assets/about/mobile/image-real-deal.jpg"
+        : "/assets/about/tablet/image-real-deal.jpg",
+      altText: "Header-2 Image",
+    },
   ];
 
   const routeData = route === "/about" ? dataAboutSection : dataDesignTable;

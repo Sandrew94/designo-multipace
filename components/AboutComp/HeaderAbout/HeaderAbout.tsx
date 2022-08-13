@@ -7,6 +7,7 @@ import {
 } from "./HeaderAbout.styles";
 import Image from "next/image";
 import React from "react";
+import StringDividerAtIndex from "../../../utils/StringDividerAtIndex";
 
 type Props = {
   title: string;
@@ -40,18 +41,18 @@ export default function HeaderAbout({
       <ContainerTitleAB idx={idx}>
         <TitleAB idx={idx}>{title}</TitleAB>
         <DescriptionAB idx={idx}>
-          {idx === 0 ? (
-            description
+          {idx === 2 ? (
+            <StringDividerAtIndex
+              description={description}
+              startBR={"We are"}
+            /> //Index 2
+          ) : idx === 0 ? (
+            description //Index 0
           ) : (
-            <>
-              {description!
-                .split("")
-                .splice(0, description!.indexOf("Our" + " team"))
-                .join("")}
-              <br />
-              <br />
-              {description!.slice(description!.indexOf("Our team"))}
-            </>
+            <StringDividerAtIndex
+              description={description}
+              startBR={"Our team"}
+            /> //Index 1
           )}
         </DescriptionAB>
         {children}

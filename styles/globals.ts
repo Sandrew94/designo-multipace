@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { device } from "./device";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -36,6 +37,20 @@ h1,h2{
     margin-inline-start: 0em;
     margin-inline-end: 0em;
 }
+
+#map { 
+  height: 32rem;
+  width: 100%;
+@media ${device.tablet} {
+  width: 95%;
+  margin-bottom: 3rem;
+  border-radius: 15px;
+}
+  @media ${device.laptop} {
+    width: 35%;
+    margin-bottom: 0rem;
+  }
+            }
 
 
 `;

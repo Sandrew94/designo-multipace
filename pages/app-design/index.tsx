@@ -2,7 +2,7 @@ import React from "react";
 import HeaderDesign from "../../components/HeaderDesign/HeaderDesign";
 import { filterCard } from "../../utils/filterCard";
 import MultipleCardDesign from "../../components/CardDesign/MultipleCardDesign";
-import { dataDesignMock } from "../../DummyData/DummyData";
+import { dataDesignMock } from "../../DummyData/DataDesignMock";
 import { filterDesignTableData } from "../../utils/DummyDataManipulations";
 import SingleTableMobile from "../../components/DesignTable/SingleTable/SingleTableMobile";
 import { v4 } from "uuid";

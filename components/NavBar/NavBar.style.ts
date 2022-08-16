@@ -34,7 +34,7 @@ export const LogoText = styled.span`
 ////////////////////////////////
 
 export const SidebarStyle = styled.div`
-  z-index: 10;
+  z-index: 9999;
 `;
 
 export const SidebarRight = styled.div<{

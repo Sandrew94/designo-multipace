@@ -2,7 +2,7 @@ import React from "react";
 import HeaderDesign from "../../components/HeaderDesign/HeaderDesign";
 import { filterCard } from "../../utils/filterCard";
 import MultipleCardDesign from "../../components/CardDesign/MultipleCardDesign";
-import { dataDesignMock } from "../../DummyData/DummyData";
+import { dataDesignMock } from "../../DummyData/DataDesignMock";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { useRouter } from "next/router";
 import DDTableMultiplePages from "../../components/DesignTable/DesktopDesignTable/DDTableMultiplePages";

@@ -5,6 +5,7 @@ import {
   WrapperSingleLocation,
 } from "./SingleLocation.style";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
   url: string;
@@ -19,7 +20,9 @@ export default function SingleLocation({ url, alt, nationName }: Props) {
         <Image src={url} width={202} height={202} alt={alt} />
       </LocationAvatarPosition>
       <TextLocation>{nationName}</TextLocation>
-      <ButtonLocations>SEE LOCATION</ButtonLocations>
+      <ButtonLocations>
+        <Link href={"/locations"}>SEE LOCATION</Link>
+      </ButtonLocations>
     </WrapperSingleLocation>
   );
 }

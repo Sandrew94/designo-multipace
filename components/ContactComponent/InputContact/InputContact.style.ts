@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 ////// FORM
 
@@ -17,48 +17,48 @@ export const FormStyle = styled.form`
   justify-content: center;
   width: 75%;
   margin: 0 auto;
-
-  & ::placeholder {
-    color: rgba(255, 255, 255, 1);
-    opacity: 50%; //To Manage
-    padding: 2.4rem 0 0 1.4rem;
-    & :hover {
-      opacity: 100%;
-    }
-  }
-
-  & :hover {
-    opacity: 100%;
-  }
-
-  & :nth-child(4) {
-    & div {
-      top: 10rem;
-    }
-  }
 `;
 
-export const LabelStyle = styled.label`
-  position: relative;
+///////////////
+//SINGLE INPUT
+
+export const LinePosition = styled.div`
+  height: 1px;
+  background: #fff;
+  width: 100%;
+  opacity: 0.5;
 `;
 
 export const InputStyle = styled.input`
   width: 29.1rem;
   border: none;
   background: #e7816b;
-  border-bottom: 1px solid #fff;
-  height: 6.2rem;
+  height: 6.5rem;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 2.6rem;
   color: rgba(255, 255, 255, 1);
-  opacity: 50%; //To Manage
   outline: none;
   cursor: pointer;
+  box-shadow: none;
+`;
 
-  & :hover {
-    opacity: 100%;
-  }
+export const LabelStyle = styled.label`
+  position: relative;
+`;
+
+export const PlaceholderPosition = styled.div`
+  position: absolute;
+  top: 1.8rem;
+  left: 1.8rem;
+`;
+
+export const PlaceholderStyle = styled.span`
+  font-family: "Jost", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  color: #fff;
 `;
 
 export const TextAreaStyle = styled.textarea`
@@ -66,19 +66,13 @@ export const TextAreaStyle = styled.textarea`
   height: 12.6rem;
   border: none;
   background: #e7816b;
-  border-bottom: 1px solid #fff;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 2.6rem;
   color: rgba(255, 255, 255, 1);
-  opacity: 50%; //To Manage
   outline: none;
   cursor: pointer;
   resize: none;
-
-  & :hover {
-    opacity: 100%;
-  }
 `;
 
 export const ButtonSubmit = styled.button`

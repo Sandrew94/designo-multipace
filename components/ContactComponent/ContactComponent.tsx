@@ -6,7 +6,7 @@ import {
   WrapperContact,
 } from "./ContactComponents.style";
 import InputContact from "./InputContact/InputContact";
-
+import gsap from "gsap";
 type Props = {};
 
 export default function ContactComponent(props: Props) {
@@ -39,6 +39,7 @@ export default function ContactComponent(props: Props) {
                 cx="438"
                 cy="843.642"
                 r="146"
+                className={"circle1"}
               />
               <circle
                 fill="url(#a)"
@@ -46,6 +47,7 @@ export default function ContactComponent(props: Props) {
                 cx="146"
                 cy="843.642"
                 r="146"
+                className={"circle2"}
               />
               <circle
                 transform="scale(-1 1) rotate(-90 0 876.358)"

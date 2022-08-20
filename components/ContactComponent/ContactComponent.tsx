@@ -6,7 +6,6 @@ import {
   WrapperContact,
 } from "./ContactComponents.style";
 import InputContact from "./InputContact/InputContact";
-import gsap from "gsap";
 type Props = {};
 
 export default function ContactComponent(props: Props) {

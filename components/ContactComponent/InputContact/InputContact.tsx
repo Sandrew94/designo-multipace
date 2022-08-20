@@ -16,13 +16,18 @@ import {
 import { MemoSingleInput } from "./SingleInput/SingleInput";
 import React, { useRef } from "react";
 import gsap from "gsap";
-import { tl } from "../Animations";
+import { errorAnimationHandler } from "../Animations/Errors/ErrorAni";
+import { MouseLeaveTextAreaAnim } from "../Animations/TextAreaAnimations/MouseLeaveTextAreaAnim";
+import { MouseEnterTextareaAnim } from "../Animations/TextAreaAnimations/MouseEnterTextareaAnim";
+import { FocusAnimationsTextArea } from "../Animations/TextAreaAnimations/FocusAnimationsTextArea";
+import { BlurTextAreaAnimations } from "../Animations/TextAreaAnimations/BlurTextAreaAnimations";
 
 export default function InputContact() {
   const textarea = useRef<HTMLTextAreaElement>(null);
   const line = useRef(null);
   const placeholder = useRef(null);
   const errorRef = useRef(null);
+
   const formik = useFormik({
     initialValues: {
       Name: "",
@@ -85,73 +90,29 @@ export default function InputContact() {
 
   React.useEffect(() => {
     //Error popup
-    tl.fromTo(
-      errorRef.current,
-      { right: -30, opacity: 0 },
-      { right: 0, opacity: 1, duration: 0.5 }
-    );
+    errorAnimationHandler(errorRef);
   }, [formik.touched.YourMessage, formik.errors.YourMessage]);
 
+  const textAreaObj = {
+    textarea,
+    line,
+    placeholder,
+  };
+
   const onMouseLeave = () => {
-    if (textarea.current!.value.length === 0) {
-      gsap.fromTo(
-        line.current,
-        { width: "100%", height: 3, opacity: 1, duration: 0.5 },
-        { width: "100%", height: 1, opacity: 0.5 }
-      );
-      gsap.fromTo(
-        placeholder.current,
-        { top: 130, left: 18 },
-        { top: 0, left: 10 }
-      );
-    }
+    MouseLeaveTextAreaAnim(textAreaObj);
   };
 
   const onMouseEnter = () => {
-    if (textarea.current!.value.length === 0) {
-      gsap.fromTo(
-        line.current,
-        { width: 0, height: 0, opacity: 0.5 },
-        { width: "100%", height: 3, opacity: 1, duration: 0.5 }
-      );
-      gsap.fromTo(
-        placeholder.current,
-        { top: 0, left: 10 },
-        { top: 130, left: 18 }
-      );
-    }
+    MouseEnterTextareaAnim(textAreaObj);
   };
 
   const handleFocusAnimations = () => {
-    if (textarea.current!.value.length >= 1) return;
-    else {
-      gsap.fromTo(
-        line.current,
-        { width: 0, height: 0, opacity: 0.5 },
-        { width: "100%", height: 3, opacity: 1, duration: 0.5 }
-      );
-      gsap.to(placeholder.current, { top: 130, left: 18 });
-    }
+    FocusAnimationsTextArea(textAreaObj);
   };
 
   const handleBlur = () => {
-    if (textarea.current!.value.length >= 1) {
-      gsap.to(line.current, {
-        width: "100%",
-        height: 3,
-        opacity: 1,
-        duration: 0.5,
-      });
-    } else {
-      gsap.to(line.current, {
-        width: "100%",
-        height: 1,
-        opacity: 0.5,
-        duration: 0.5,
-      });
-
-      gsap.to(placeholder.current, { top: 0, left: 18 });
-    }
+    BlurTextAreaAnimations(textAreaObj);
   };
 
   return (

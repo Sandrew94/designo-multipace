@@ -11,7 +11,11 @@ import Image from "next/image";
 import { ChangeEvent, useRef, useState } from "react";
 import gsap from "gsap";
 import React from "react";
-import { tl } from "../../Animations";
+import { errorAnimationHandler } from "../../Animations/Errors/ErrorAni";
+import { MouseLeaveAnimations } from "../../Animations/InputAnimations/MauseLeaveAnimations";
+import { MouseEnterAnimations } from "../../Animations/InputAnimations/MouseEnterAnimations";
+import { FocusAnimations } from "../../Animations/InputAnimations/FocusAnimations";
+import { BlurAnimations } from "../../Animations/InputAnimations/BlurAnimations";
 
 type Props = {
   handleError: boolean | string | undefined;
@@ -38,87 +42,51 @@ function SingleInput({
   let q = gsap.utils.selector(component);
 
   React.useEffect(() => {
-    //Error popup
-    tl.fromTo(
-      errorRef.current,
-      { right: -30, opacity: 0 },
-      { right: 0, opacity: 1, duration: 0.5 }
-    );
+    errorAnimationHandler(errorRef);
   }, [handleError]);
 
   const onMouseLeave = () => {
     const inputSelector = q("input") as HTMLInputElement[];
 
-    inputSelector.forEach((input) => {
-      if (input.value.length === 0) {
-        gsap.fromTo(
-          line.current,
-          { width: "100%", height: 3, opacity: 1, duration: 0.5 },
-          { width: "100%", height: 1, opacity: 0.5 }
-        );
-        gsap.fromTo(
-          q(".placeholderStyle"),
-          { top: 0, left: 10 },
-          { top: 18, left: 18 }
-        );
-      }
-    });
+    const dataToAnimate = {
+      inputSelector,
+      line,
+      placeholderStyleArr: q(".placeholderStyle"),
+    };
+
+    MouseLeaveAnimations(dataToAnimate);
   };
 
   const onMouseEnter = () => {
     const inputSelector = q("input") as HTMLInputElement[];
-    inputSelector.forEach((input) => {
-      if (input.value.length === 0) {
-        gsap.fromTo(
-          line.current,
-          { width: 0, height: 0, opacity: 0.5 },
-          { width: "100%", height: 3, opacity: 1, duration: 0.5 }
-        );
-        gsap.fromTo(
-          q(".placeholderStyle"),
-          { top: 18, left: 18 },
-          { top: 0, left: 10 }
-        );
-      }
-    });
+
+    const dataToAnimate = {
+      inputSelector,
+      line,
+      placeholderStyleArr: q(".placeholderStyle"),
+    };
+
+    MouseEnterAnimations(dataToAnimate);
   };
 
   const handleFocusAnimations = () => {
     const inputSelector = q("input") as HTMLInputElement[];
-    inputSelector.forEach((input) => {
-      if (input.value.length >= 1) return;
-      else {
-        gsap.fromTo(
-          line.current,
-          { width: 0, height: 0, opacity: 0.5 },
-          { width: "100%", height: 3, opacity: 1, duration: 0.5 }
-        );
-        gsap.to(q(".placeholderStyle"), { top: 0, left: 10 });
-      }
-    });
+    const dataToAnimate = {
+      inputSelector,
+      line,
+      placeholderStyleArr: q(".placeholderStyle"),
+    };
+    FocusAnimations(dataToAnimate);
   };
 
   const handleBlur = () => {
     const inputSelector = q("input") as HTMLInputElement[];
-    inputSelector.forEach((input) => {
-      if (input.value.length >= 1) {
-        gsap.to(line.current, {
-          width: "100%",
-          height: 3,
-          opacity: 1,
-          duration: 0.5,
-        });
-      } else {
-        gsap.to(line.current, {
-          width: "100%",
-          height: 1,
-          opacity: 0.5,
-          duration: 0.5,
-        });
-
-        gsap.to(q(".placeholderStyle"), { top: 18, left: 18 });
-      }
-    });
+    const dataToAnimate = {
+      inputSelector,
+      line,
+      placeholderStyleArr: q(".placeholderStyle"),
+    };
+    BlurAnimations(dataToAnimate);
   };
 
   return (

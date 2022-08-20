@@ -1,10 +1,12 @@
 import { WrapperLocationCity } from "./LocationsCity.style";
 import SingleLocation from "./SingleLocation/SingleLocation";
 import { v4 } from "uuid";
+import { useRouter } from "next/router";
 
 type Props = {};
 
 export default function LocationsCity(props: Props) {
+  const route = useRouter();
   const LocationData = [
     {
       url: "/assets/shared/desktop/illustration-canada.svg",
@@ -22,8 +24,9 @@ export default function LocationsCity(props: Props) {
       nationName: "UNITED KINGDOM",
     },
   ];
+
   return (
-    <WrapperLocationCity>
+    <WrapperLocationCity pageName={route.asPath}>
       {LocationData.map((item) => {
         return (
           <SingleLocation

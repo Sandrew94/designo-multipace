@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../styles/device";
 
 ////// FORM
 
@@ -8,6 +9,10 @@ export const FormContainerSubmit = styled.div`
   width: 100%;
   margin-top: 5rem;
   overflow: hidden;
+  @media ${device.laptop} {
+    margin-top: 5.5rem;
+    margin-right: 5rem;
+  }
 `;
 
 export const FormStyle = styled.form`
@@ -17,6 +22,16 @@ export const FormStyle = styled.form`
   justify-content: center;
   width: 75%;
   margin: 0 auto;
+
+  @media ${device.tablet} {
+    width: 80%;
+    align-items: flex-start;
+    margin-left: 5.8rem;
+  }
+  @media ${device.laptop} {
+    width: 100%;
+    margin-left: 0;
+  }
 `;
 
 ///////////////
@@ -32,7 +47,7 @@ export const LinePosition = styled.div`
 export const InputStyle = styled.input`
   width: 29.1rem;
   border: none;
-  background: #e7816b;
+  background: transparent;
   height: 6.5rem;
   font-size: 1.5rem;
   font-weight: 500;
@@ -41,10 +56,16 @@ export const InputStyle = styled.input`
   outline: none;
   cursor: pointer;
   box-shadow: none;
+  @media ${device.tablet} {
+    width: 57.3rem;
+  }
 `;
 
 export const LabelStyle = styled.label`
   position: relative;
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 export const PlaceholderPosition = styled.div`
@@ -65,7 +86,7 @@ export const TextAreaStyle = styled.textarea`
   width: 29.1rem;
   height: 12.6rem;
   border: none;
-  background: #e7816b;
+  background: transparent;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 2.6rem;
@@ -73,6 +94,9 @@ export const TextAreaStyle = styled.textarea`
   outline: none;
   cursor: pointer;
   resize: none;
+  @media ${device.tablet} {
+    width: 57.3rem;
+  }
 `;
 
 export const ButtonSubmit = styled.button`
@@ -89,6 +113,15 @@ export const ButtonSubmit = styled.button`
   border: none;
   border-radius: 15px;
   margin-top: 3.9rem;
+  cursor: pointer;
+
+  @media ${device.tablet} {
+    align-self: flex-end;
+  }
+
+  @media ${device.laptop} {
+    margin-top: 2.4rem;
+  }
 `;
 
 export const WrapperFormikError = styled.div`

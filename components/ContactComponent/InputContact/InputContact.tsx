@@ -15,7 +15,6 @@ import {
 } from "./InputContact.style";
 import { MemoSingleInput } from "./SingleInput/SingleInput";
 import React, { useRef } from "react";
-import gsap from "gsap";
 import { errorAnimationHandler } from "../Animations/Errors/ErrorAni";
 import { MouseLeaveTextAreaAnim } from "../Animations/TextAreaAnimations/MouseLeaveTextAreaAnim";
 import { MouseEnterTextareaAnim } from "../Animations/TextAreaAnimations/MouseEnterTextareaAnim";

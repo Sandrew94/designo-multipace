@@ -42,6 +42,7 @@ export const LinePosition = styled.div`
   background: #fff;
   width: 100%;
   opacity: 0.5;
+  cursor: pointer;
 `;
 
 export const InputStyle = styled.input`

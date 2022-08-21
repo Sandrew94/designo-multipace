@@ -10,6 +10,7 @@ export const WrapperFooter = styled.footer`
   justify-content: center;
   position: relative;
   background: rgba(29, 28, 30, 1);
+  //overflow: hidden;
 
   @media ${device.tablet} {
     height: 60rem;
@@ -17,19 +18,19 @@ export const WrapperFooter = styled.footer`
   }
 
   @media ${device.laptop} {
-    margin-top: 15%;
+    //margin-top: 15%;
+    height: 39.3rem;
+    margin-top: 0;
     width: 100%;
   }
 `;
 
-////////////////////////////////
-
-export const WrapperPT = styled.div`
+export const WrapperPT = styled.div<{ pageName: string }>`
   width: 90vw;
   height: 37.9rem;
   background-color: #e7816b;
   border-radius: 15px;
-  display: flex;
+  display: ${(props) => (props.pageName === "/contact" ? "none" : "flex")};
   flex-direction: column;
   align-items: center;
   overflow: hidden;
@@ -41,6 +42,8 @@ export const WrapperPT = styled.div`
     width: 90%;
     flex-direction: row;
     justify-content: space-around;
+    top: -20rem;
+    height: 29.2rem;
   }
 
   @media ${device.laptopL} {
@@ -48,15 +51,20 @@ export const WrapperPT = styled.div`
   }
 `;
 
-export const WrapperBlack = styled.footer`
+export const WrapperBlack = styled.footer<{ pageName: string }>`
   width: 100%;
   height: 120rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: ${(props) =>
+    props.pageName === "/contact" ? "space-evenly" : "flex-end"};
   margin-bottom: 5rem;
   position: relative;
+
+  @media ${device.laptop} {
+    height: 39.3rem;
+  }
 `;
 
 ///////////////

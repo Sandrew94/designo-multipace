@@ -12,7 +12,7 @@ export const WrapperMain = styled.section`
   }
   @media ${device.laptop} {
     margin-top: 0%;
-    height: 80vh;
+    height: 70vh;
     width: 95%;
     margin: 0 auto;
   }

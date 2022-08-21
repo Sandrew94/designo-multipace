@@ -13,12 +13,15 @@ import {
   WrapperSocial,
 } from "../../Footer.style";
 import Image from "next/image";
+import { NextRouter } from "next/router";
 
-type Props = {};
+type Props = {
+  route: NextRouter;
+};
 
-export const TabletOrDesktopViewFB = (props: Props) => {
+export const TabletOrDesktopViewFB = ({ route }: Props) => {
   return (
-    <WrapperBlack>
+    <WrapperBlack pageName={route.asPath}>
       <WrapperFooterLand>
         <FooterLogo>
           <Image

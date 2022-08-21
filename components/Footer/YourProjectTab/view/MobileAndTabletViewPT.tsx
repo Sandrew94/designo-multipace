@@ -6,11 +6,12 @@ import {
   WrapperPT,
 } from "../../Footer.style";
 import ButtonLink from "../../../Button/ButtonLink";
+import { NextRouter } from "next/router";
 
-type Props = {};
-export const MobileAndTabletViewPT = (props: Props) => {
+type Props = { route: NextRouter };
+export const MobileAndTabletViewPT = ({ route }: Props) => {
   return (
-    <WrapperPT>
+    <WrapperPT pageName={route.asPath}>
       <PtSvgPosition>
         <svg width="876" height="584" xmlns="http://www.w3.org/2000/svg">
           <defs>

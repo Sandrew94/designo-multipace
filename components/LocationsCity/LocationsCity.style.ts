@@ -15,6 +15,6 @@ export const WrapperLocationCity = styled.section<{ pageName: string }>`
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: ${(props) =>
-      props.pageName === "/contact" ? "30rem" : "100rem"};
+      props.pageName === "/contact" ? "20rem" : "115rem"};
   }
 `;

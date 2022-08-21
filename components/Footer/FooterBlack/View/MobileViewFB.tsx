@@ -13,11 +13,12 @@ import {
 } from "../../Footer.style";
 import Image from "next/image";
 import Link from "next/link";
+import { NextRouter } from "next/router";
 
-type Props = {};
-export const MobileViewFB = (props: Props) => {
+type Props = { route: NextRouter };
+export const MobileViewFB = ({ route }: Props) => {
   return (
-    <WrapperBlack>
+    <WrapperBlack pageName={route.asPath}>
       <FooterLogo>
         <Image
           src="/assets/extra-images/Oval.png"

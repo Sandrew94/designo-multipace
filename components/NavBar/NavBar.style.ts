@@ -96,3 +96,12 @@ export const BackgroundActive = styled.div`
   opacity: 0.5;
   z-index: -1;
 `;
+
+/////////
+
+export const SVGBigFirstPosition = styled.div`
+  position: absolute;
+  left: -25rem;
+  top: 50rem;
+  z-index: -1;
+`;

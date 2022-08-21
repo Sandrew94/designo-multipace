@@ -10,4 +10,8 @@ export const WrapperLocationsMap = styled.section`
       margin-top: 12rem;
     }
   }
+
+  @media ${device.laptop} {
+    margin-bottom: 30%;
+  }
 `;

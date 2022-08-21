@@ -126,6 +126,10 @@ export const WrapperDesktopSTM = styled.section`
     margin: 0 1rem;
   }
 
+  @media ${device.laptop} {
+    margin-bottom: 25%;
+  }
+
   @media ${device.laptopL} {
     width: 90%;
 

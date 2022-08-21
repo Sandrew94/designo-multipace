@@ -6,7 +6,7 @@ import TabletOrMobileView from "./view/TabletOrMobileView";
 export default function HeaderHome() {
   const isLaptop = useMediaQuery("(min-width: 1024px)");
   return (
-    <WrapperHeaderHome>
+    <WrapperHeaderHome className={"animate-headerHome"}>
       {isLaptop ? <LaptopView /> : <TabletOrMobileView />}
     </WrapperHeaderHome>
   );

@@ -13,7 +13,7 @@ export default function DesignTable({}: Props) {
   const isLaptop = useMediaQuery("(min-width: 1024px)");
 
   return (
-    <WrapperMain>
+    <WrapperMain className={"animate-designTable"}>
       {isLaptop ? (
         <DesktopDesignTableHome />
       ) : (

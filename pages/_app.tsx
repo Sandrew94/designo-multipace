@@ -3,18 +3,18 @@ import Footer from "../components/Footer/Footer";
 import NavBar from "../components/NavBar/NavBar";
 import { GlobalStyle } from "../styles/globals";
 import Image from "next/image";
-import React from "react";
 import { useRouter } from "next/router";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { BigSVGFooter, ContainerSVG } from "../styles/BigSVGStyle";
+import PageTransitions from "../components/PageTransitions/PageTransitions";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const route = useRouter();
   const isDesktop = useMediaQuery("(min-width: 1024px)");
+
   return (
     <>
       <NavBar />
-      <GlobalStyle />
       <ContainerSVG>
         {isDesktop ? (
           route.asPath === "/" ||
@@ -34,9 +34,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         ) : (
           ""
         )}
-        <Component {...pageProps} />
       </ContainerSVG>
-
+      <PageTransitions route={route.asPath}>
+        <Component {...pageProps} />
+      </PageTransitions>
+      <GlobalStyle />
       <Footer />
     </>
   );

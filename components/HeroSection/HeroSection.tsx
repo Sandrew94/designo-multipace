@@ -26,7 +26,7 @@ export default function HeroSection({}: Props) {
     },
   ];
   return (
-    <WrapperMain>
+    <WrapperMain className={"animate-heroSection"}>
       {heroSectionData.map((hero) => {
         return (
           <SingleHero

@@ -30,7 +30,7 @@ export default function SingleMapComponent({
   idx,
 }: Props) {
   return (
-    <WrapperSingleMap idx={idx}>
+    <WrapperSingleMap idx={idx} className={"animate-LocationMap"}>
       <MapContainer center={gps} zoom={13} scrollWheelZoom={false} id="map">
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

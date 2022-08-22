@@ -8,10 +8,15 @@ type Props = {
 export default function StringDividerAtIndex({ description, startBR }: Props) {
   return (
     <>
-      {description!.split("").splice(0, description!.indexOf(startBR)).join("")}
+      {!description
+        ? ""
+        : description!
+            .split("")
+            .splice(0, description!.indexOf(startBR))
+            .join("")}
       <br />
       <br />
-      {description!.slice(description!.indexOf(startBR))}
+      {!description ? "" : description!.slice(description!.indexOf(startBR))}
     </>
   );
 }

@@ -25,7 +25,11 @@ export default function SingleTable({
 }: Props) {
   const linkToPage = title.toLowerCase().split(" ").join("-");
   return (
-    <WrapperTable width={width} height={height}>
+    <WrapperTable
+      width={width}
+      height={height}
+      className={"animate-designTable"}
+    >
       <Image src={image} layout="fill" objectFit="cover" alt={"photo"} />
       <Link href={linkToPage}>
         <TextDesignTitle>{title}</TextDesignTitle>

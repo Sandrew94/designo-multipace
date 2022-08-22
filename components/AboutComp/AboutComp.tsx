@@ -7,7 +7,7 @@ type Props = {};
 
 export default function AboutComp(props: Props) {
   return (
-    <AboutWrapper>
+    <AboutWrapper className={"animate-headerAbout"}>
       <MultipleHeaderAbout />
       <LocationsCity />
     </AboutWrapper>

@@ -11,7 +11,7 @@ type Props = { title: string; description: string };
 export default function HeaderDesign({ title, description }: Props) {
   const tabletAndDesktopView = useMediaQuery("(min-width: 768px)");
   return (
-    <WrapperHeaderDesign>
+    <WrapperHeaderDesign className={"animate-headerDesign"}>
       <HeaderDesignTitle>{title}</HeaderDesignTitle>
       <HeaderDesignDescription>{description}</HeaderDesignDescription>
       <SVGPositionHD>

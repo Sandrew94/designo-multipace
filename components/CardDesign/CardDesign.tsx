@@ -15,7 +15,7 @@ type Props = {
 
 export default function CardDesign({ url, title, description }: Props) {
   return (
-    <WrapperCD>
+    <WrapperCD className={"animate-cardDesign"}>
       <PositionImageCD>
         <Image
           width={327}

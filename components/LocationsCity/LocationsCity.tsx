@@ -26,7 +26,10 @@ export default function LocationsCity(props: Props) {
   ];
 
   return (
-    <WrapperLocationCity pageName={route.asPath}>
+    <WrapperLocationCity
+      pageName={route.asPath}
+      className={"animate-locationCity"}
+    >
       {LocationData.map((item) => {
         return (
           <SingleLocation

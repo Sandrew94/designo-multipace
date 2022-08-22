@@ -12,7 +12,7 @@ type Props = {};
 export default function ContactComponent(props: Props) {
   const tabletOrLaptopView = useMediaQuery("(min-width: 768px)");
   return (
-    <WrapperContact>
+    <WrapperContact className={"animate-contactComponent"}>
       <TextContainerContact>
         <SVGPositionContact>
           {tabletOrLaptopView ? (

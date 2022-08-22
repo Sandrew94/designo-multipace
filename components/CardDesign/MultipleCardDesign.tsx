@@ -9,7 +9,7 @@ type Props = {
 
 export default function MultipleCardDesign({ array }: Props) {
   return (
-    <LaptopGridView>
+    <LaptopGridView className={"animate-cardGallery"}>
       {array?.map((card, idx) => {
         return (
           <CardDesign

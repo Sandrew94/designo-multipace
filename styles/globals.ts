@@ -13,6 +13,7 @@ body {
     sans-serif;
     max-width: 140rem;
     margin: 0 auto;
+  scroll-behavior: smooth !important;
 }
 
 a {

@@ -8,6 +8,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { BigSVGFooter, ContainerSVG } from "../styles/BigSVGStyle";
 import PageTransitions from "../components/PageTransitions/PageTransitions";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const route = useRouter();
@@ -19,8 +20,20 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <title>Designo Multipage</title>
+        <meta name="description" content="Designo multipage" />
+        <meta charSet="UTF-8" />
+        <meta name="keywords" content="titla, meta, nextjs" />
+        <meta name="author" content="Syamlal CM" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+          maximum-scale="1.0"
+          user-scalable="0"
+        />
+      </Head>
       <NavBar />
-
       <PageTransitions route={route.asPath}>
         <ContainerSVG>
           {isDesktop ? (

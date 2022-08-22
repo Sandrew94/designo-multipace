@@ -14,6 +14,7 @@ import {
 } from "../../Footer.style";
 import Image from "next/image";
 import { NextRouter } from "next/router";
+import Link from "next/link";
 
 type Props = {
   route: NextRouter;
@@ -33,9 +34,15 @@ export const TabletOrDesktopViewFB = ({ route }: Props) => {
           <FooterLogoStyles>DESIGNO</FooterLogoStyles>
         </FooterLogo>
         <InfoLinkContainer>
-          <InfoLinkStyle>OUR COMPANY</InfoLinkStyle>
-          <InfoLinkStyle>LOCATIONS</InfoLinkStyle>
-          <InfoLinkStyle>CONTACT</InfoLinkStyle>
+          <Link href={"/about"} passHref>
+            <InfoLinkStyle>OUR COMPANY</InfoLinkStyle>
+          </Link>
+          <Link href={"/locations"} passHref>
+            <InfoLinkStyle>LOCATIONS</InfoLinkStyle>
+          </Link>
+          <Link href={"/contact"} passHref>
+            <InfoLinkStyle>CONTACT</InfoLinkStyle>
+          </Link>
         </InfoLinkContainer>
       </WrapperFooterLand>
 

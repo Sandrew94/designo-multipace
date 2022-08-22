@@ -30,13 +30,13 @@ export const MobileViewFB = ({ route }: Props) => {
       </FooterLogo>
       <InfoLinkContainer>
         <Divider />
-        <Link href={"/about"}>
+        <Link href={"/about"} passHref>
           <InfoLinkStyle>OUR COMPANY</InfoLinkStyle>
         </Link>
-        <Link href={"/locations"}>
+        <Link href={"/locations"} passHref>
           <InfoLinkStyle>LOCATIONS</InfoLinkStyle>
         </Link>
-        <Link href={"/contact"}>
+        <Link href={"/contact"} passHref>
           <InfoLinkStyle>CONTACT</InfoLinkStyle>
         </Link>
       </InfoLinkContainer>

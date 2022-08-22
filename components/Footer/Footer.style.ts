@@ -213,6 +213,7 @@ export const InfoLinkStyle = styled.span`
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 1);
   padding-top: 4rem;
+  cursor: pointer;
 
   &:last-child {
     padding-bottom: 2rem;

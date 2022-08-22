@@ -43,13 +43,13 @@ type Props = {
 export default function PageTransitions({ children, route }: Props) {
   useEffect(() => {
     AnimationOnEntered(route);
-  }, [route]);
+  }, []);
 
   const onExitStart = (element: HTMLElement) => {
     AnimationExitStart(route, element);
   };
 
-  const onEnteredStart = (element: HTMLElement) => {
+  const onEnteredStart = () => {
     AnimationOnEntered(route);
   };
 

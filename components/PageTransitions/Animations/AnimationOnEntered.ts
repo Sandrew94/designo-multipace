@@ -1,7 +1,7 @@
 import { tlEnter } from "./Timeline";
 
 export function AnimationOnEntered(route: string) {
-  if (!document) return;
+  if (typeof window.document === undefined) return;
 
   if (route === "/") {
     const headerHome = document.querySelector(".animate-headerHome");

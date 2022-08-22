@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import iconHamb from "/public/assets/shared/mobile/icon-hamburger.svg";
 import crossIcon from "/public/assets/shared/mobile/icon-close.svg";
 import Link from "next/link";
@@ -9,14 +9,22 @@ import {
   SidebarRight,
   SidebarStyle,
 } from "../NavBar.style";
+import gsap from "gsap";
 
 type Props = {};
 
 export default function Sidebar({}: Props) {
+  const sidebarRef = useRef(null);
   const [displayStyle, setDisplayStyle] = useState(false);
 
   const handleDisplaySidebar = () => {
     setDisplayStyle(!displayStyle);
+
+    gsap.fromTo(
+      sidebarRef.current,
+      { opacity: 0, height: 0 },
+      { opacity: 1, height: 235, ease: "Circ.easeOut", duration: 1 }
+    );
   };
   return (
     <SidebarStyle onClick={handleDisplaySidebar}>
@@ -33,7 +41,7 @@ export default function Sidebar({}: Props) {
       ) : (
         <Image src={iconHamb} width={24} height={20} alt="logo-image-open" />
       )}
-      <SidebarRight displayStyle={displayStyle}>
+      <SidebarRight displayStyle={displayStyle} ref={sidebarRef}>
         <Link href="/">
           <AStyle>OUR COMPANY</AStyle>
         </Link>

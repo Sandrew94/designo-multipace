@@ -54,6 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           ) : (
             ""
           )}
+
           <Component {...pageProps} />
         </ContainerSVG>
       </PageTransitions>

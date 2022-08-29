@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { v4 } from "uuid";
 import { AnimationOnEntered } from "./Animations/AnimationOnEntered";
 import { AnimationExitStart } from "./Animations/AnimationsOnExitStart";
-import { tlEnter } from "./Animations/Timeline";
 
 const MainComponent = styled.div`
   &.page-enter {
@@ -25,7 +24,7 @@ const MainComponent = styled.div`
     backface-visibility: hidden;
     z-index: 9999;
     opacity: 1;
-    top: 0;
+    top: 7.35%;
     right: 0;
     width: 100%;
   }
@@ -53,8 +52,6 @@ export default function PageTransitions({ children, route }: Props) {
     AnimationOnEntered(route);
   };
 
-  const onExitingStart = (element: HTMLElement) => {};
-
   return (
     <TransitionGroup>
       <CSSTransition
@@ -62,10 +59,9 @@ export default function PageTransitions({ children, route }: Props) {
         classNames="page"
         timeout={2000}
         onEntered={onEnteredStart}
-        onExiting={onExitingStart}
         onExit={onExitStart}
       >
-        <MainComponent>{children}</MainComponent>
+        <MainComponent className={"test"}>{children}</MainComponent>
       </CSSTransition>
     </TransitionGroup>
   );

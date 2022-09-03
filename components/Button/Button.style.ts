@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { device } from "../../styles/device";
 
 export interface StylesTextType {
-  stylesText: Record<string, string | number>;
+  stylesText?: Record<string, string | number>;
+  route: string;
 }
 
 export const ButtonStyle = styled.button<StylesTextType>`
@@ -16,9 +17,6 @@ export const ButtonStyle = styled.button<StylesTextType>`
   border-radius: 8px;
   width: 15.2rem;
   height: 5.6rem;
+  cursor: pointer;
   ${(props) => props.stylesText}
-
-  @media ${device.laptopL} {
-    margin-left: 10rem;
-  }
 `;

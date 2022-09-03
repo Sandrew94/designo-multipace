@@ -39,6 +39,7 @@ export default function LaptopView({}: Props) {
           text={"LEARN MORE"}
           stylesText={{
             zIndex: 5,
+            marginLeft: "10rem",
           }}
         />
       </ContainerHH>

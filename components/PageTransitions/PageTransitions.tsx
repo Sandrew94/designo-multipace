@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 import { v4 } from "uuid";
@@ -22,11 +22,14 @@ const MainComponent = styled.div`
   &.page-exit-active {
     position: absolute;
     backface-visibility: hidden;
-    z-index: 9999;
+    z-index: 99;
     opacity: 1;
     top: 7.35%;
     right: 0;
-    width: 100%;
+    width: 90%;
+    max-width: 140rem;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 
   &.page-enter-done {
@@ -40,10 +43,6 @@ type Props = {
 };
 
 export default function PageTransitions({ children, route }: Props) {
-  useEffect(() => {
-    AnimationOnEntered(route);
-  }, []);
-
   const onExitStart = (element: HTMLElement) => {
     AnimationExitStart(route, element);
   };
@@ -61,7 +60,7 @@ export default function PageTransitions({ children, route }: Props) {
         onEntered={onEnteredStart}
         onExit={onExitStart}
       >
-        <MainComponent className={"test"}>{children}</MainComponent>
+        <MainComponent>{children}</MainComponent>
       </CSSTransition>
     </TransitionGroup>
   );

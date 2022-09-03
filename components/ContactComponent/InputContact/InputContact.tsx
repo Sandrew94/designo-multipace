@@ -20,12 +20,18 @@ import { MouseLeaveTextAreaAnim } from "../Animations/TextAreaAnimations/MouseLe
 import { MouseEnterTextareaAnim } from "../Animations/TextAreaAnimations/MouseEnterTextareaAnim";
 import { FocusAnimationsTextArea } from "../Animations/TextAreaAnimations/FocusAnimationsTextArea";
 import { BlurTextAreaAnimations } from "../Animations/TextAreaAnimations/BlurTextAreaAnimations";
+import gsap from "gsap";
+import {
+  onEnterSubmitButton,
+  onExitSubmitButton,
+} from "../Animations/SubmitButton/handleSubmitButtonAnimations";
 
 export default function InputContact() {
   const textarea = useRef<HTMLTextAreaElement>(null);
   const line = useRef(null);
   const placeholder = useRef(null);
   const errorRef = useRef(null);
+  const submitButtonRef = useRef(null);
 
   const formik = useFormik({
     initialValues: {
@@ -114,6 +120,13 @@ export default function InputContact() {
     BlurTextAreaAnimations(textAreaObj);
   };
 
+  const handleOnSubmitMouseEnter = () => {
+    onEnterSubmitButton(submitButtonRef);
+  };
+
+  const handleOnSubmitMouseLeave = () => {
+    onExitSubmitButton(submitButtonRef);
+  };
   return (
     <FormContainerSubmit>
       <FormStyle onSubmit={formik.handleSubmit} autoComplete={"off"}>
@@ -168,7 +181,14 @@ export default function InputContact() {
           </LinePosition>
         </LabelStyle>
 
-        <ButtonSubmit type={"submit"}>SUBMIT</ButtonSubmit>
+        <ButtonSubmit
+          type={"submit"}
+          ref={submitButtonRef}
+          onMouseEnter={handleOnSubmitMouseEnter}
+          onMouseLeave={handleOnSubmitMouseLeave}
+        >
+          SUBMIT
+        </ButtonSubmit>
       </FormStyle>
     </FormContainerSubmit>
   );

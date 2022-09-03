@@ -27,20 +27,3 @@ export const TextLocation = styled.span`
   color: rgba(51, 49, 54, 1);
   padding-top: 5rem;
 `;
-
-export const ButtonLocations = styled.button`
-  cursor: pointer;
-  width: 15.2rem;
-  height: 5.6rem;
-  border-radius: 8px;
-  color: rgba(255, 255, 255, 1);
-  background: rgba(231, 129, 107, 1);
-  font-family: "Jost", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 2.2rem;
-  letter-spacing: 1px;
-  text-align: center;
-  border: none;
-  margin-top: 3rem;
-`;

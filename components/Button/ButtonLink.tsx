@@ -11,7 +11,7 @@ type Props = {
   href: string;
   text: string;
   stylesText?: Record<string, string | number>;
-  type: "button" | "submit" | "reset" | undefined;
+  type?: "button" | "submit" | "reset" | undefined;
 };
 
 export default function ButtonLink({
